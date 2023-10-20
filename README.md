@@ -1,4 +1,4 @@
-# ia-python-openai
+# (Extra) Programando sistemas em Python com a API do GPT
 Repositório para o projeto do Capítulo 8 do livro "IAs Generativas"
 
 ## Descrição
