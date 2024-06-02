@@ -18,7 +18,7 @@ messages.append({"role": "user", "content": input_message})  # adiciona a primei
 # enquanto o input não for a palavra 'fim'
 while input_message != 'fim':
     # Chamada à API
-    response = openai.ChatCompletion.create(
+    response = openai.chat.completions.create(
         model = 'gpt-4',
         messages = messages,
         max_tokens = 200,
@@ -26,7 +26,7 @@ while input_message != 'fim':
     )
 
     # Extrai a resposta de dentro do JSON de resposta
-    answer = response['choices'][0]['message']['content']
+    answer = response.choices[0].message.content
 	
     messages.append({"role": "assistant", "content": answer})  # adiciona a resposta no histórico do chat
 
